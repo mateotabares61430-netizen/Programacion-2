@@ -3,7 +3,7 @@ import java.time.LocalDateTime;
 
 public class MainReservas {
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         // Crear el sistema de reservas
         SistemaReservas sistema = new SistemaReservas("Universidad Nacional");
         

@@ -4,19 +4,19 @@ import java.util.ArrayList;
 
 public class SistemaReservas {
 
-private ArrayList<Reserva> reservas;
+    private ArrayList<Reserva> reservas;
     private String nombreUniversidad;
-    
+
     public SistemaReservas(String nombreUniversidad) {
         this.reservas = new ArrayList<>();
         this.nombreUniversidad = nombreUniversidad;
     }
-    
+
     public void agregarReserva(Reserva reserva) {
         reservas.add(reserva);
         System.out.println("Reserva #" + reserva.getNumeroReserva() + " agregada exitosamente");
     }
-    
+
     public void mostrarTodasLasReservas() {
         System.out.println("\n SISTEMA DE RESERVAS - " + nombreUniversidad.toUpperCase() + " ");
         System.out.println("\nTotal de reservas: " + reservas.size());
@@ -29,7 +29,7 @@ private ArrayList<Reserva> reservas;
             }
         }
     }
-    
+
     public void mostrarReservasActivas() {
         System.out.println("\n--- RESERVAS ACTIVAS ---");
         int contador = 0;
@@ -43,9 +43,8 @@ private ArrayList<Reserva> reservas;
             System.out.println("No hay reservas activas.");
         }
     }
-    
+
     public ArrayList<Reserva> getReservas() {
         return reservas;
     }
-
 }
