@@ -19,9 +19,6 @@ private String carrera;
         return semestre;
     }
     
-    public void solicitarTutoria() {
-        System.out.println(getNombre() + " ha solicitado una tutoría académica");
-    }
     
     @Override
     public void mostrarInformacion() {

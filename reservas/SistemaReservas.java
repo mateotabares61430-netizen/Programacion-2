@@ -31,7 +31,7 @@ public class SistemaReservas {
     }
 
     public void mostrarReservasActivas() {
-        System.out.println("\n--- RESERVAS ACTIVAS ---");
+        System.out.println("\n RESERVAS ACTIVAS ");
         int contador = 0;
         for (Reserva reserva : reservas) {
             if (reserva.getEstado().equals("Activa")) {
@@ -40,7 +40,7 @@ public class SistemaReservas {
             }
         }
         if (contador == 0) {
-            System.out.println("No hay reservas activas.");
+            System.out.println("No hay reservas activas ");
         }
     }
 

@@ -4,108 +4,81 @@ import java.time.LocalDateTime;
 public class MainReservas {
 
     public static void main(String[] args) {
-        // Crear el sistema de reservas
-        SistemaReservas sistema = new SistemaReservas("Universidad Nacional");
+
+        // Inicializar sistema
+        SistemaReservas sistema = new SistemaReservas("Universidad de Caldas");
         
         System.out.println(" INICIALIZANDO SISTEMA DE RESERVAS \n");
         
-        // Crear usuarios (Estudiante y Profesor)
+        // Creación de usuarios (o sea estudiantes :3)
         Estudiante estudiante1 = new Estudiante(
-            "Ana María López", 
+            "David Gilmour", 
             "EST001", 
-            "ana.lopez@unal.edu.co",
+            "david.gilmour@unal.edu.co",
             "Ingeniería de Sistemas",
             6
         );
         
-        Profesor profesor1 = new Profesor(
-            "Dr. Carlos Mendoza",
-            "PROF001",
-            "carlos.mendoza@unal.edu.co",
-            "Ciencias de la Computación",
-            "Inteligencia Artificial"
+        Estudiante estudiante2 = new Estudiante(
+            "Daniel Alejandro Aguirre", 
+            "EST002", 
+            "daniel.aguirre@unal.edu.co",
+            "Ingieniería de Alimentos",
+            5
         );
         
-        // Crear recursos (Sala y Cancha)
-        Sala sala1 = new Sala(
-            "Sala de Estudio A",
-            "SALA-A01",
-            "Edificio 401 - Piso 2",
-            15,
+        // Creación de recursos (o sea canchas a reservar por estudiantes :v)
+        
+        Cancha cancha1 = new Cancha(
+            "Cancha Monumento",
+            "C01",
+            "Campus Deportivo",
+            "Fútbol",
             true
         );
         
-        Cancha cancha1 = new Cancha(
-            "Cancha Central",
-            "CANCH-C01",
-            "Zona Deportiva",
-            "Fútbol",
+        Cancha cancha2 = new Cancha(
+            "Cancha Trasera",
+            "C02",
+            "Zona Parking",
+            "Tenis",
             false
         );
         
-        Sala sala2 = new Sala(
-            "Sala de Conferencias",
-            "SALA-C02",
-            "Edificio 405 - Piso 1",
-            50,
-            true
-        );
         
-        // Crear reservas
-        System.out.println("\n--- CREANDO RESERVAS ---\n");
+        // Creación de las reservas con su respectiva fecha y duración :3
+        System.out.println("\n CREANDO RESERVAS \n");
         
         Reserva reserva1 = new Reserva(
             estudiante1,
-            sala1,
+            cancha1,
             LocalDateTime.of(2025, 11, 25, 14, 0),
             2
         );
         sistema.agregarReserva(reserva1);
         
         Reserva reserva2 = new Reserva(
-            profesor1,
-            cancha1,
-            LocalDateTime.of(2025, 11, 26, 16, 0),
+            estudiante2,
+            cancha2,
+            LocalDateTime.of(2025, 12, 15, 18, 0),
             3
         );
         sistema.agregarReserva(reserva2);
         
-        Reserva reserva3 = new Reserva(
-            profesor1,
-            sala2,
-            LocalDateTime.of(2025, 11, 27, 10, 0),
-            4
-        );
-        sistema.agregarReserva(reserva3);
         
-        // Mostrar todas las reservas con información completa
+        // Método para mostras todas las reservas con información detallada :3
         sistema.mostrarTodasLasReservas();
         
-        // Demostrar métodos específicos de las clases derivadas
-        System.out.println("\n=== DEMOSTRANDO MÉTODOS ESPECÍFICOS ===\n");
-        
-        System.out.println("--- Métodos de Estudiante ---");
-        estudiante1.solicitarTutoria();
-        
-        System.out.println("\n--- Métodos de Profesor ---");
-        profesor1.programarClase();
-        
-        System.out.println("\n--- Métodos de Sala ---");
-        sala1.verificarEquipamiento();
-        
-        System.out.println("\n--- Métodos de Cancha ---");
-        cancha1.realizarMantenimiento();
-        
-        // Mostrar reservas activas
+        // Método para mostrar reservas activas
         sistema.mostrarReservasActivas();
         
-        // Cancelar una reserva y mostrar cambios
-        System.out.println("\n--- CANCELANDO RESERVA ---\n");
+        // Método para cancelar una reserva (a manera de prueba) y mostrar las que quedan activas :3
+        System.out.println("\n CANCELANDO RESERVA \n");
         reserva2.cancelarReserva();
         
+        //Como ya se indicó previamente, mostrar las activas después de las canceladas
         sistema.mostrarReservasActivas();
         
-        System.out.println("\n=== FIN DEL PROGRAMA ===\n");
     }    
 
 }

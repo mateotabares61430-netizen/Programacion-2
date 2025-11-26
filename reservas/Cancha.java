@@ -19,10 +19,6 @@ public class Cancha extends Recurso {
         return techada;
     }
     
-    public void realizarMantenimiento() {
-        System.out.println("Realizando mantenimiento de la cancha de " + tipoDeporte);
-    }
-    
     @Override
     public void mostrarInformacion() {
         super.mostrarInformacion();

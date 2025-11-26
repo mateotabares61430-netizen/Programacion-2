@@ -61,11 +61,11 @@ public class Reserva {
         System.out.println("Estado: " + estado);
         System.out.println("Fecha y Hora: " + fechaHora.format(formatter));
         System.out.println("Duración: " + duracionHoras + " hora(s)");
-        System.out.println("\n--- Usuario ---");
+        System.out.println("\n Usuario ");
         usuario.mostrarInformacion();
-        System.out.println("\n--- Recurso ---");
+        System.out.println("\n Recurso ");
         recurso.mostrarInformacion();
-        System.out.println("=====================================\n");
+        System.out.println("\n");
     }
     
     @Override
