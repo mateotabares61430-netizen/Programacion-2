@@ -105,7 +105,7 @@ public static void main(String[] args) {
         
         sistema.mostrarReservasActivas();
         
-        System.out.println("\n=== FIN DEL PROGRAMA ===");
+        System.out.println("\n=== FIN DEL PROGRAMA ===\n");
     }    
 
 }

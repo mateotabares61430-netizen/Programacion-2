@@ -18,7 +18,7 @@ private ArrayList<Reserva> reservas;
     }
     
     public void mostrarTodasLasReservas() {
-        System.out.println("  SISTEMA DE RESERVAS - " + nombreUniversidad.toUpperCase() + " ");
+        System.out.println("\n SISTEMA DE RESERVAS - " + nombreUniversidad.toUpperCase() + " ");
         System.out.println("\nTotal de reservas: " + reservas.size());
         
         if (reservas.isEmpty()) {
