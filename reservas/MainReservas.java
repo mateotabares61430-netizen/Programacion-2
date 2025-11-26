@@ -14,15 +14,15 @@ public class MainReservas {
         Estudiante estudiante1 = new Estudiante(
             "David Gilmour", 
             "EST001", 
-            "david.gilmour@unal.edu.co",
-            "Ingeniería de Sistemas",
+            "david.gilmour@caldas.edu.co",
+            "Licenciatura en Biología y Química",
             6
         );
         
         Estudiante estudiante2 = new Estudiante(
             "Daniel Alejandro Aguirre", 
             "EST002", 
-            "daniel.aguirre@unal.edu.co",
+            "daniel.aguirre@ucaldas.edu.co",
             "Ingieniería de Alimentos",
             5
         );
