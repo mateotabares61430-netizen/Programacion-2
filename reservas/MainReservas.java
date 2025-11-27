@@ -14,9 +14,9 @@ public class MainReservas {
         Estudiante estudiante1 = new Estudiante(
             "David Gilmour", 
             "EST001", 
-            "david.gilmour@caldas.edu.co",
+            "david.gilmour@ucaldas.edu.co",
             "Licenciatura en Biología y Química",
-            6
+            6, "3226445932"
         );
         
         Estudiante estudiante2 = new Estudiante(
@@ -24,7 +24,7 @@ public class MainReservas {
             "EST002", 
             "daniel.aguirre@ucaldas.edu.co",
             "Ingieniería de Alimentos",
-            5
+            5, "3145888943"
         );
         
         // Creación de recursos (o sea canchas a reservar por estudiantes :v)

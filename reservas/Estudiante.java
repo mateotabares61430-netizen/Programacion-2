@@ -2,11 +2,11 @@ package reservas;
 
 public class Estudiante extends Usuario {
 
-private String carrera;
+    private String carrera;
     private int semestre;
     
-    public Estudiante(String nombre, String id, String email, String carrera, int semestre) {
-        super(nombre, id, email);
+    public Estudiante(String nombre, String id, String email, String carrera, int semestre, String telefono) {
+        super(nombre, id, email, telefono);
         this.carrera = carrera;
         this.semestre = semestre;
     }
@@ -25,11 +25,12 @@ private String carrera;
         super.mostrarInformacion();
         System.out.println("Carrera: " + carrera);
         System.out.println("Semestre: " + semestre);
+
     }
     
     @Override
     public String toString() {
-        return "Estudiante: " + getNombre() + " - " + carrera + " (Semestre " + semestre + ")";
+        return "Estudiante: " + getNombre() + " - " + "Carrera: " + carrera + " (Semestre " + semestre + ")";
     }
 
 }
